@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <script>
+      function pickLastApples(fruits) {
+        let countApples = 0;
+        let countOranges = 0;
+
+        fruits = fruits.reverse();
+
+        const selectfruit = fruits.filter(function (fruit){
+          if (countApples >= 2){
+            return true
+          }
+          else if (fruit == 'apple'){
+            countApples = countApples + 1;
+            return false
+          }
+          else {
+            return true
+          }
+        })
+        return selectfruit.reverse()
+      }
+
+      console.log(pickLastApples(['cherry', 'apple', 'orange', 'apple', 'banana', 'apple']));
+    </script>
+  </body>
+</html>

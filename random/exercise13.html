@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <script>
+      function max(array){
+        let max = Infinity;
+        const greater_or_eq = array.filter(function (num){
+          return num >= 0;
+        })
+
+        greater_or_eq.forEach(function(num) {
+          if (num < max){
+            max = num
+          }
+
+        });
+        return max
+      };
+      console.log(max([1, 5, -2, 4, 3, 5, 0]));
+    </script>
+  </body>
+</html>

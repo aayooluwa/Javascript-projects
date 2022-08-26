@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <input type="text" id="text"/>
+    <button onclick="addTodiv()">Put in Div</button>
+    
+    
+    
+    <script>
+      
+
+      function addTodiv() {
+        let writeText = document.getElementById('text');
+        let input = writeText.value;
+
+        let element = document.createElement('div');
+        element.innerText = input;
+        document.body.appendChild(element);
+      }
+
+    </script>
+
+
+  </body>
+</html>

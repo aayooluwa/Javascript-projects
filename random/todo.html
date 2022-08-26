@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Todo App</title>
+  </head>
+  <body>
+    <button id="todo-button" onclick="changeToDone()">Press me</button>
+    <div id="counter">0</div>
+    <button id="up" onclick="increaseCount()">UP</button>
+    <button id="down" onclick="decreaseCount()">DOWN</button>
+    
+
+
+    <script>
+      let todo1 = 'Get groceries';
+      let todo2 = 'Wash Car';
+      let todo3 = 'Make dinner';
+
+
+      let element = document.createElement('div');
+      element.innerText = todo1;
+      document.body.appendChild(element);
+
+      element = document.createElement('div');
+      element.innerText = todo3;
+      document.body.appendChild(element);
+
+      element = document.createElement('div');
+      element.innerText = todo2;
+      document.body.appendChild(element);
+
+      function greeting(firstName) {
+        console.log('Hello ' + firstName)
+      }
+
+      greeting('Simon')
+
+
+      function toCentimeters(length) {
+        console.log(length/0.39370)
+      };
+
+      function arrayDouble(strArr) {
+        let result = [];
+
+        strArr.forEach(function (str) {
+          result.push(str,str);
+        });
+        console.log(result);
+      }  
+
+      arrayDouble(['meow','bark'])
+
+      toCentimeters(24);
+
+      function arraySum(numArr) {
+        let total = 0;
+        
+        numArr.forEach(function (add) {
+          total = total + add
+        });
+
+        console.log(total)
+      };
+
+      arraySum([1, 7, 3]);
+      
+      function changeToDone() {
+        let button = document.getElementById('todo-button');
+        button.innerText = 'Done';
+      }
+      let count = 0;
+      
+      function increaseCount() {
+        
+        count = count + 1
+        let counter = document.getElementById('counter');
+        counter.innerText = count;
+      }
+      
+      function decreaseCount() {
+        
+        count = count - 1
+        let counter = document.getElementById('counter');
+        counter.innerText = count;
+      }
+
+    </script>
+  </body>
+</html>
